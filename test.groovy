@@ -22,8 +22,8 @@ localRepository('repository-key') {
   xrayIndex false
   blockXrayUnscannedArtifacts false
   xrayMinimumBlockedSeverity "" // "Minor" | "Major" | "Critical"
-  enableFileListsIndexing ""
-  yumGroupFileNames false
+  enableFileListsIndexing false
+  yumGroupFileNames ""
   dockerApiVersion "V2" // default
   maxUniqueTags 0 // default
 }
