@@ -4,7 +4,7 @@ userName = userInput (
     description : "please provide a user name"
   )
 
-artifactory('hts-itamarb-db-lb'){
+
 security {
   users {
     conflictResolutionPolicy "OVERRIDE" // default
@@ -44,4 +44,3 @@ security {
     }
   }
 } 
-}
