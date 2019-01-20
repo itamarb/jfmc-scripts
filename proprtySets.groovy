@@ -1,3 +1,4 @@
+artifactory('hts-itamarb-db-lb'){
 propertySets {
   propertySet('property_set_name') {
     singleSelect('property_name') {
@@ -16,4 +17,5 @@ propertySets {
       value "value_1"
     }
   }
+}
 }
