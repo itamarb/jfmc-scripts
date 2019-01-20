@@ -1,6 +1,6 @@
 repoName = userInput (
     type: "STRING",
-    value : "libs-release-local",
+    value : "generic-local",
     description : "please provide a repository name"
   )
 
@@ -25,10 +25,8 @@ artifactory('hts-itamarb-db-lb') {
   calculateYumMetadata false
   yumRootDepth 0
   xrayIndex false
-  enableFileListsIndexing ""
-  yumGroupFileNames ""
-  dockerApiVersion "V2" // default
-  maxUniqueTags 0 // default
+  dockerApiVersion "V2"
+  maxUniqueTags 0
 
   }
 
