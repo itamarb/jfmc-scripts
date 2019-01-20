@@ -25,6 +25,7 @@ localRepository('repository-key') {
   enableFileListsIndexing false
   yumGroupFileNames ""
   dockerApiVersion "V2" // default
+  optionalIndexCompressionFormats "xz"
   maxUniqueTags 0 // default
 }
 }
