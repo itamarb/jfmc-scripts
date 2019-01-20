@@ -13,7 +13,6 @@ artifactory('hts-itamarb-db-lb') {
   repoLayoutRef "maven-2-default"
   packageType "generic" // "maven" | "gradle" | "ivy" | "sbt" | "nuget" | "gems" | "npm" | "conan" | "helm" |
                         // "bower" | "debian" | "pypi" | "docker" | "vagrant" | "gitlfs" | "yum" | "generic"
-  debianTrivialLayout false
   checksumPolicyType "client-checksums" // default | "server-generated-checksums"
   handleReleases true // default
   handleSnapshots true // default
@@ -26,8 +25,6 @@ artifactory('hts-itamarb-db-lb') {
   calculateYumMetadata false
   yumRootDepth 0
   xrayIndex false
-  blockXrayUnscannedArtifacts false
-  xrayMinimumBlockedSeverity "" // "Minor" | "Major" | "Critical"
   enableFileListsIndexing ""
   yumGroupFileNames ""
   dockerApiVersion "V2" // default
