@@ -1,6 +1,6 @@
 repoName = userInput (
     type: "STRING",
-    value : "generic-local",
+    value : "maven-remote",
     description : "please provide a repository name"
   )
 repoType = userInput (
@@ -9,27 +9,20 @@ repoType = userInput (
   description : "please choose a repository type"
   )
 
-url = userInput (
-  type: "STRING",
-  value : "http://",
-  description : "Please enter the remote repository's URL"
-  )
-
 userName = userInput (
   type: "STRING",
-  value : "Maven",
+  value : "admin",
   description : "please enter user name"
   )
 
 password = userInput (
   type: "STRING",
-  value : "Maven",
+  value : "password",
   description : "please enter password"
   )
 
 artifactory('hts-itamarb-db-lb') {
 remoteRepository(repoName) {
-  url url
   username userName
   password password
   proxy ""
