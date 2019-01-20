@@ -26,6 +26,5 @@ localRepository('repository-key') {
   yumGroupFileNames ""
   dockerApiVersion "V2" // default
   maxUniqueTags 0 // default
-  optionalIndexCompressionFormats "" // "bz2", "lzma", "xz"
 }
 }
