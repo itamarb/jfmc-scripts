@@ -1,5 +1,11 @@
+repoName = userInput (
+    type: "STRING",
+    value : "libs-release-local",
+    description : "please provide a repository name"
+  )
+
 artifactory ('hts-itamarb-db-lb'){
-localRepository('repository-key') {
+localRepository('repoName') {
   description "Public description"
   notes "Some internal notes"
   includesPattern "**/*" // default
