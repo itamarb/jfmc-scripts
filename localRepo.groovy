@@ -5,7 +5,7 @@ repoName = userInput (
   )
 
 artifactory ('hts-itamarb-db-lb'){
-localRepository('repoName') {
+localRepository(repoName) {
   description "Public description"
   notes "Some internal notes"
   includesPattern "**/*" // default
