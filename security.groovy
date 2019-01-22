@@ -5,7 +5,7 @@ userName = userInput (
   )
 
 artifactory('hts-itamarb-db-lb'){
-
+security {
   users {
     conflictResolutionPolicy "OVERRIDE" // default
     user(userName) {
@@ -43,5 +43,5 @@ artifactory('hts-itamarb-db-lb'){
       }
     }
   }
-
+} 
 }
