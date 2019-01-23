@@ -6,11 +6,7 @@ exclude = userInput (
 
 artifactory('hts-itamarb-db-lb'){
   localRepository("my-repository") {
-  description userInput (
-    type : "STRING",
-    value : " ",
-    description : "Please provide a description"
-  )
+  description "Description"
   includesPattern "**/*" // default
   excludesPattern exclude // default
  }
