@@ -21,7 +21,7 @@ groups {
       admin false
       profileUpdatable false
       internalPasswordDisabled false
-      groups (['groupA', 'test_group']) // values (['groupA', 'groupB']) are examples. Please set existing values from the instance
+      groups (['test_group']) // values (['groupA', 'groupB']) are examples. Please set existing values from the instance
     }
   }
   
