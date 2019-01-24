@@ -34,7 +34,7 @@ groups {
       anyDistribution false
       repositories (["libs-release-local", "generic-local"]) // values (["local-rep1", "local-rep2", ...]) are examples. Please set existing values from the instance
       users {
-        $'userName' (['manage', 'delete', 'deploy', 'annotate', 'read']) // value userA - is example. Please set existing user names from the instance
+        userName (['manage', 'delete', 'deploy', 'annotate', 'read']) // value userA - is example. Please set existing user names from the instance
       }
       groups {
         test_group (['manage', 'delete', 'deploy', 'annotate', 'read']) // value groupsG1 - is example. Please set existing group names from the instance
