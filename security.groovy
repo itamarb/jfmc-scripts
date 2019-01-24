@@ -7,9 +7,8 @@ userName = userInput (
 artifactory('hts-itamarb-db-lb'){
 security {
   users {
-    conflictResolutionPolicy "OVERRIDE" // default
     user(userName) {
-      email 'iutamarb@jfrog.com'
+      email 'itamarb@jfrog.com'
       password 'password'
       admin false
       profileUpdatable false
@@ -19,7 +18,6 @@ security {
   }
   
   groups {
-    conflictResolutionPolicy "OVERRIDE" // default
     group('test_group') {
       description 'desc_1'
       autoJoin false
@@ -27,7 +25,6 @@ security {
   }
   
   permissions {
-    conflictResolutionPolicy "OVERRIDE" // default
     permission('test_permission') {
       includesPattern '**'
       excludesPattern ''
