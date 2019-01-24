@@ -6,6 +6,14 @@ userName = userInput (
 
 artifactory('hts-itamarb-db-lb'){
 security {
+
+groups {
+    group('test_group') {
+      description 'desc_1'
+      autoJoin false
+    }
+  }
+
   users {
     user(userName) {
       email 'itamarb@jfrog.com'
@@ -14,13 +22,6 @@ security {
       profileUpdatable false
       internalPasswordDisabled false
       groups (['groupA', 'test_group']) // values (['groupA', 'groupB']) are examples. Please set existing values from the instance
-    }
-  }
-  
-  groups {
-    group('test_group') {
-      description 'desc_1'
-      autoJoin false
     }
   }
   
