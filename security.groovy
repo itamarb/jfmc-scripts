@@ -14,7 +14,7 @@ security {
       admin false
       profileUpdatable false
       internalPasswordDisabled false
-      groups (['groupA', 'groupB']) // values (['groupA', 'groupB']) are examples. Please set existing values from the instance
+      groups (['groupA', 'test_group']) // values (['groupA', 'groupB']) are examples. Please set existing values from the instance
     }
   }
   
