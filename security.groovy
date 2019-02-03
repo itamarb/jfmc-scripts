@@ -27,7 +27,7 @@ groups {
       admin false
       profileUpdatable false
       internalPasswordDisabled false
-      groups (["$groupName"]) // values (['groupA', 'groupB']) are examples. Please set existing values from the instance
+      groups ([groupName]) // values (['groupA', 'groupB']) are examples. Please set existing values from the instance
     }
   }
   
