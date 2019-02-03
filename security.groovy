@@ -4,11 +4,17 @@ userName = userInput (
     description : "please provide a user name"
   )
 
+groupName = userInput (
+    type: "STRING",
+    value : "test_group",
+    description : "please provide a group name"
+  )
+
 artifactory('hts-itamarb-db-lb'){
 security {
 
 groups {
-    group('test_group') {
+    group(groupName) {
       description 'desc_1'
       autoJoin false
     }
@@ -21,7 +27,7 @@ groups {
       admin false
       profileUpdatable false
       internalPasswordDisabled false
-      groups (['test_group']) // values (['groupA', 'groupB']) are examples. Please set existing values from the instance
+      groups (["$groupName"]) // values (['groupA', 'groupB']) are examples. Please set existing values from the instance
     }
   }
   
@@ -37,7 +43,7 @@ groups {
         "$userName" (['manage', 'delete', 'deploy', 'annotate', 'read']) // value userA - is example. Please set existing user names from the instance
       }
       groups {
-        test_group (['manage', 'delete', 'deploy', 'annotate', 'read']) // value groupsG1 - is example. Please set existing group names from the instance
+        "$groupName" (['manage', 'delete', 'deploy', 'annotate', 'read']) // value groupsG1 - is example. Please set existing group names from the instance
       }
     }
   }
