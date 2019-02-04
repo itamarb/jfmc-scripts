@@ -1,3 +1,9 @@
+Instances = userInput (
+  type: "ARTIFACTORY",
+  multivalued: true,
+  description: "All Instances"
+  )
+
 userName = userInput (
     type: "STRING",
     value : "itamarb",
