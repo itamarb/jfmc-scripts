@@ -1,3 +1,9 @@
+instance = userInput (
+    type: "ARTIFACTORY",
+    value : "",
+    description : "please select an Artifactory instance"
+  )
+
 repoName = userInput (
     type: "STRING",
     value : "generic-local",
@@ -9,7 +15,7 @@ repoType = userInput (
   description : "please choose a repository type"
   )
 
-artifactory('hts-itamarb-db-lb') {
+artifactory(instance) {
   localRepository(repoName) {
   description "Public description"
   notes "Some internal notes"
