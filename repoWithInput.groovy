@@ -1,5 +1,5 @@
 instance = userInput (
-    type: "ARTIFACTORY",
+    type: "STRING",
     value : "",
     description : "please select an Artifactory instance"
   )
