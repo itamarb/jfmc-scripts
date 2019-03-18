@@ -38,7 +38,5 @@ artifactory(instance) {
   xrayIndex false
   dockerApiVersion "V2"
   maxUniqueTags 0
-
   }
-
 }
