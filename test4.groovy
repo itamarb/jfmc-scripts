@@ -1,5 +1,5 @@
 instance = userInput (
-  type : "EDGE",
+  type : "ARTIFACTORY",
   description : "Please select the artifactory instance to run against"
 )
 
