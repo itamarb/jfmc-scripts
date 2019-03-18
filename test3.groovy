@@ -1,3 +1,10 @@
+instance = userInput (
+  type : "EDGE",
+  name : "Instance",
+  multivalued : true,
+  description : "Please select the artifactory instance to run against"
+)
+
 repoName = userInput (
     type: "STRING",
     value : "generic-local",
@@ -9,7 +16,7 @@ repoType = userInput (
   description : "please choose a repository type"
   )
 
-artifactory('hts-itamarb-db-lb') {
+artifactory(instance) {
   localRepository(repoName) {
   description "Public description"
   notes "Some internal notes"
@@ -32,7 +39,5 @@ artifactory('hts-itamarb-db-lb') {
   xrayIndex false
   dockerApiVersion "V2"
   maxUniqueTags 0
-
   }
-
 }
