@@ -1,19 +1,15 @@
-instance = userInput (
+Instance = userInput (
   type : "EDGE",
   multivalued : true,
   description : "Please select the artifactory instance to run against"
 )
 
-repoName = userInput (
+RepoName = userInput (
     type: "STRING",
     value : "generic-local",
     description : "please provide a repository name"
   )
-repoType = userInput (
-  type: "STRING",
-  value : "Maven",
-  description : "please choose a repository type"
-  )
+RepoType = userInput(type: "PACKAGE_TYPE", description: "Repository Package Type")
 
 artifactory(instance) {
   localRepository(repoName) {
