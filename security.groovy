@@ -16,6 +16,18 @@ groupName = userInput (
     description : "please provide a group name"
   )
 
+permission = userInput (
+    type: "STRING",
+    value : "test_permission",
+    description : "please provide a permission target name"
+  )
+
+repositories = userInput (
+    type: "REPOSITORY",
+    value : " ",
+    description : "please select repositories"
+  )
+
 artifactory('hts-itamarb-db-lb'){
 security {
 
@@ -38,13 +50,13 @@ groups {
   }
   
   permissions {
-    permission('test_permission') {
+    permission(permission) {
       includesPattern '**'
       excludesPattern ''
       anyLocal false
       anyRemote false
       anyDistribution false
-      repositories (["libs-release-local", "generic-local"]) // values (["local-rep1", "local-rep2", ...]) are examples. Please set existing values from the instance
+      repositories (repositories) // values (["local-rep1", "local-rep2", ...]) are examples. Please set existing values from the instance
       users {
         "$userName" (['manage', 'delete', 'deploy', 'annotate', 'read']) // value userA - is example. Please set existing user names from the instance
       }
